@@ -1,0 +1,48 @@
+/* Visualizer.css */
+.visualizer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.visualizer-bar {
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(to top, #9f7aea, #4299e1); /* Purple-400 to Blue-400 */
+    background-size: cover;
+    border-radius: 2px;
+    animation: jumpyBounce 0.7s ease infinite alternate;
+  }
+  
+
+/* Apply different animation durations and delays for each bar */
+.visualizer-bar:nth-child(1) {
+  animation-delay: 0.1s;
+  animation-duration: 2.7s;
+}
+.visualizer-bar:nth-child(2) {
+  animation-delay: 0.15s;
+  animation-duration: 2.1s;
+}
+.visualizer-bar:nth-child(3) {
+  animation-delay: 0.2s;
+  animation-duration: 2.3s;
+}
+.visualizer-bar:nth-child(4) {
+  animation-delay: 0.25s;
+  animation-duration: 3s;
+}
+.visualizer-bar:nth-child(5) {
+  animation-delay: 0.3s;
+  animation-duration: 2.5s;
+}
+
+@keyframes jumpyBounce {
+  0% { transform: scaleY(1); }
+  20% { transform: scaleY(1.8); }
+  40% { transform: scaleY(0.6); }
+  60% { transform: scaleY(1.4); }
+  80% { transform: scaleY(0.9); }
+  100% { transform: scaleY(1.5); }
+}

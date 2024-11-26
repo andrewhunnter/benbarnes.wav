@@ -6,12 +6,12 @@ import Visualizer from './Visualizer';
 
 const ArtistLandingPage = () => {
   const mockData = {
-    artistName: "benbarnes",
-    profilePicture: "/benbarns.jpg",
+    artistName: "ben barnes",
+    profilePicture: "/benbarnes.png",
     streamingStats: {
-      spotify: 10000,
-      soundcloud: 12000,
-      appleMusic: 2000,
+      spotify: 5300,
+      soundcloud: 16700,
+      appleMusic: 3500,
     },
     latestAlbum: {
       title: "deadweight",
@@ -23,6 +23,7 @@ const ArtistLandingPage = () => {
       { platform: "SoundCloud", url: "#", icon: faSoundcloud },
       { platform: "Apple Music", url: "https://music.apple.com/us/artist/benbarnes/1686996493", icon: faApple },
     ],
+    contactEmail: "ben@benbarnesmusic.com",
   };
 
   const formatNumber = (num) => {
@@ -211,6 +212,17 @@ const ArtistLandingPage = () => {
               </span>
             </a>
           ))}
+        </div>
+
+        {/* Contact Section - now moved below platform links */}
+        <div className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5 text-center">
+          <h4 className="text-lg font-bold mb-2">PRODUCTION & BOOKINGS</h4>
+          <a 
+            href={`mailto:${mockData.contactEmail}`}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            {mockData.contactEmail}
+          </a>
         </div>
       </div>
     </div>

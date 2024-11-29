@@ -105,19 +105,21 @@ const ArtistLandingPage = () => {
         </div>
 
         {/* Streaming Stats */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 px-2 sm:px-0 max-w-sm sm:max-w-none mx-auto w-full">
           {Object.entries(mockData.streamingStats).map(([platform, stat], index) => {
             const icons = { spotify: faSpotify, soundcloud: faSoundcloud, appleMusic: faApple };
             return (
               <div
                 key={index}
-                className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5 text-center"
+                className="bg-[#141414] p-4 rounded-lg shadow-md border-[1px] border-white/5 flex sm:flex-col items-center sm:items-stretch justify-between sm:justify-center sm:text-center sm:space-y-2"
               >
-                <FontAwesomeIcon icon={icons[platform]} className="w-8 h-8 mx-auto mb-2 text-white" />
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <div className="flex sm:flex-col items-center gap-3 sm:gap-2">
+                  <FontAwesomeIcon icon={icons[platform]} className="w-6 h-6 text-white" />
+                  <div className="text-sm text-gray-400">{platform}</div>
+                </div>
+                <div className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   {formatNumber(stat)}
                 </div>
-                <div className="text-sm text-gray-400">{platform}</div>
               </div>
             );
           })}

@@ -20,7 +20,7 @@ const ArtistLandingPage = () => {
     },
     profiles: [
       { platform: "Spotify", url: "https://open.spotify.com/artist/1uqbXPf5vWgMLyT2kRmZWO?si=0Mkiy9NnQCm8EuebV28eiw", icon: faSpotify },
-      { platform: "SoundCloud", url: "#", icon: faSoundcloud },
+      { platform: "SoundCloud", url: "https://soundcloud.com/auxilio", icon: faSoundcloud },
       { platform: "Apple Music", url: "https://music.apple.com/us/artist/benbarnes/1686996493", icon: faApple },
     ],
     contactEmail: "ben@benbarnesmusic.com",

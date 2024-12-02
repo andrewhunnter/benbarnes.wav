@@ -6,7 +6,7 @@ import Visualizer from './Visualizer';
 
 const ArtistLandingPage = () => {
   const mockData = {
-    artistName: "ben barnes",
+    artistName: "benbarnes",
     profilePicture: "/benbarnes.png",
     streamingStats: {
       spotify: 5300,
@@ -15,7 +15,7 @@ const ArtistLandingPage = () => {
     },
     latestAlbum: {
       title: "deadweight",
-      releaseDate: "2024-03-15",
+      releaseDate: "2024-10-31",
       imageUrl: "/deadweight.jpg",
     },
     profiles: [

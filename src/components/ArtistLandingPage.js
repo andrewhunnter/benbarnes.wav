@@ -35,7 +35,7 @@ const ArtistLandingPage = () => {
   // Snippet Playback State
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const duration = 5; // 5-second snippet
+  const duration = 10; // 10-second snippet
   const [waveform] = useState(
     Array(100).fill(0).map(() => Math.floor(Math.random() * 40) + 30)
   );

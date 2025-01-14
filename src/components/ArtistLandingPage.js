@@ -39,7 +39,7 @@ const ArtistLandingPage = () => {
   const [waveform] = useState(
     Array(100).fill(0).map(() => Math.floor(Math.random() * 40) + 30)
   );
-  const audioRef = useRef(new Audio('/test.mp3'));
+  const audioRef = useRef(new Audio('/FullSizeRender.mp3'));
   const animationFrameRef = useRef();
 
   useEffect(() => {
@@ -163,7 +163,7 @@ const ArtistLandingPage = () => {
                 {isPlaying ? '⏸️' : '▶️'}
               </button>
               <div>
-                <h4 className="text-lg font-bold">Snippet</h4>
+                <h4 className="text-lg font-bold">AL CAPONE | 1/27</h4>
                 <p className="text-sm text-gray-400">
                   {Math.floor(currentTime)}s / {duration}s
                 </p>

@@ -159,33 +159,6 @@ const ArtistLandingPage = () => {
           })}
         </div>
 
-        {/* Latest Album */}
-        <div className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5">
-          <div className="flex items-center space-x-6">
-            <img
-              src={mockData.latestAlbum.imageUrl}
-              alt="Latest Album"
-              className="w-32 h-32 rounded-lg object-cover border-2 border-white/5"
-            />
-            <div>
-              <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                {mockData.latestAlbum.title}
-              </h3>
-              <p className="text-gray-400">
-                Released: {new Date(mockData.latestAlbum.releaseDate).toLocaleDateString()}
-              </p>
-              <a 
-                href="https://li.sten.to/deadweight" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white text-sm font-bold mt-2 block hover:text-gray-300 transition-colors"
-              >
-                STREAM HERE
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Song Snippet Playback */}
         <div className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5">
           <div className="space-y-4">
@@ -227,6 +200,49 @@ const ArtistLandingPage = () => {
           </div>
         </div>
 
+        {/* Latest Album */}
+        <div className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5">
+          <div className="flex items-center space-x-6">
+            <img
+              src={mockData.latestAlbum.imageUrl}
+              alt="Latest Album"
+              className="w-32 h-32 rounded-lg object-cover border-2 border-white/5"
+            />
+            <div>
+              <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                {mockData.latestAlbum.title}
+              </h3>
+              <p className="text-gray-400">
+                Released: {new Date(mockData.latestAlbum.releaseDate).toLocaleDateString()}
+              </p>
+              <a 
+                href="https://li.sten.to/deadweight" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white text-sm font-bold mt-2 block hover:text-gray-300 transition-colors"
+              >
+                STREAM HERE
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* YouTube Video Section */}
+        <div className="bg-[#141414] p-6 rounded-lg shadow-md border-[1px] border-white/5">
+          <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Latest Video
+          </h3>
+          <div className="relative w-full pb-[56.25%]"> {/* 16:9 aspect ratio */}
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/ZP90YYmgrA8"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         {/* Platform Links */}
         <div className="space-y-4 flex flex-col items-center">
           {mockData.profiles.map((profile, index) => (
@@ -244,7 +260,7 @@ const ArtistLandingPage = () => {
                   ? "bg-gradient-to-r from-orange-400 to-orange-600"
                   : "bg-gradient-to-r from-pink-500 to-pink-600"
               }`}>
-                Listen on {profile.platform}
+                {profile.platform}
               </span>
             </a>
           ))}

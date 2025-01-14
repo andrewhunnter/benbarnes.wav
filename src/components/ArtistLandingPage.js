@@ -141,7 +141,7 @@ const ArtistLandingPage = () => {
                 Released: {new Date(mockData.latestAlbum.releaseDate).toLocaleDateString()}
               </p>
               <a 
-                href={mockData.profiles[0].url} 
+                href="https://li.sten.to/deadweight" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white text-sm font-bold mt-2 block hover:text-gray-300 transition-colors"
